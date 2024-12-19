@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Web Page</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html, body {
+            height: 100%;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #4caf50, #2196f3);
+            color: white;
+            margin: 0;
+            animation: fadeIn 2s ease-in-out;
+            border: 10px solid #000; /* تعريض الحواف */
+            border-radius: 15px; /* حواف دائرية للموقع */
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        header {
+            text-align: center;
+            margin-top: 170px;
+            font-size: 30px;
+            font-weight: bold;
+            position: absolute;
+            top: 0;
+            width: 100%;
+            background: linear-gradient(135deg, #003366, #000000);
+            -webkit-background-clip: text;
+            color: transparent;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7), 0 0 25px rgba(0, 0, 255, 0.8);
+            animation: fadeInText 2s ease-in-out forwards;
+            animation-delay: 0.5s;
+        }
+
+        @keyframes fadeInText {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .header2 {
+            text-align: center;
+            margin-top: 8px;
+            font-size: 15px;
+            font-weight: bold;
+            position: relative;
+            width: 100%;
+            color: black;
+            opacity: 0;
+            animation: fadeInText 2s ease-in-out forwards;
+            animation-delay: 1s;
+        }
+
+        .header-image {
+            width: 3%;
+            max-width: 150px;
+            height: auto;
+            border-radius: 50%;
+            border: 3px solid black;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            opacity: 0;
+            animation: fadeInImage 2s ease-in-out forwards;
+            animation-delay: 0.2s; /* ظهور الصورة بعد قليل */
+        }
+
+        @keyframes fadeInImage {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            max-width: 600px;
+            width: 100%;
+            text-align: center;
+            margin-top: 100px;
+            opacity: 0;
+            animation: fadeInGrid 2s ease-in-out forwards;
+            animation-delay: 1.5s;
+        }
+
+        @keyframes fadeInGrid {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .container .box {
+            background-color: rgba(255, 255, 255, 0.2);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, background-color 0.3s;
+            animation: moveBox 3s ease-in-out infinite; 
+        }
+
+        @keyframes moveBox {
+            0% {
+                transform: translateX(0);
+            }
+            25% {
+                transform: translateX(10px); 
+            }
+            50% {
+                transform: translateX(0); 
+            }
+            75% {
+                transform: translateX(-10px); 
+            }
+            100% {
+                transform: translateX(0); 
+            }
+        }
+
+        .box:hover {
+            transform: translateY(-10px);
+            background-color: rgba(255, 255, 255, 0.3);
+        }
+
+        .box a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .box a:hover {
+            text-decoration: underline;
+        }
+
+        .new-page {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            text-align: center;
+        }
+
+        .new-page .box {
+            width: 300px;
+            margin: 0 auto;
+            padding: 15px;
+            background-color: rgba(255, 255, 255, 0.2);
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <img src="cat.jpg" alt="cat.jpg" class="header-image">
+    <div class="header2">edited by : عمار</div>
+    <header>يحتوي هذا الموقع على مصادر تخص مجال اختبار اختراق الويب</header>
+    <div class="container">
+        <div class="box"><a href="second_page.html">مصادر للغات البرمجة الخاصة بالويب </a></div>
+        <div class="box"><a href="https://youtube.com/playlist?list=PLv7cogHXoVhXvHPzIl1dWtBiYUAL8baHj&si=J5-VomkTanPb9dHM">كورس المهندس ابراهيم اساسيات الشبكات ونظام كالي وبعض الثغرات</a></div>
+        <div class="box"><a href="https://youtube.com/playlist?list=PLX621demLUSaeP8x6tbt8H1Wfee5UH_hi&si=UGO6VuMjrLOdNGC7">كورس لتعليم ثغرة xss</a></div>
+        <div class="box"><a href="#">مصادر من الطلاب قريبا....</a></div>
+    </div>
+</body>
+</html>
+
+

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Second Page</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #4caf50, #2196f3);
+            color: white;
+            height: 100vh;
+        }
+    
+        .new-page {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            text-align: center;
+        }
+
+        .box {
+            width: 300px;
+            padding: 15px;
+            background-color: rgba(255, 255, 255, 0.2);
+            border-radius: 5px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s;
+        }
+
+        .box a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .box a:hover {
+            text-decoration: underline;
+        }
+
+        .box:hover {
+            background-color: rgba(255, 255, 255, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <h3>كورسات اللغات</h3>
+    <div class="new-page">
+        <div class="box"><a href="https://youtu.be/pszZMzI9a7A?si=_LSutoSvyszKHS6I">php</a></div>
+        <div class="box"><a href="https://youtu.be/Ai_0ONyPay4?si=7ffBqYAuJjX_o2oy">javascript</a></div>
+        <div class="box"><a href="https://youtu.be/5OdVJbNCSso?si=IUsB_vueWgoKUNGa">mysql</a></div>
+        <div class="box"><a href="https://youtu.be/HGTJBPNC-Gw?si=x5GDauY2Ss69yBiX">html and css</a></div>
+    </div>
+</body>
+</html>
+
